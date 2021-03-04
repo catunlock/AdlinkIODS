@@ -1,4 +1,4 @@
-
+#include <stdint.h>
 #include "AdlHelp.h"
 #include "InputDeviceInterface.h"
 #include "AdlDeviceFactorySingleton.h"

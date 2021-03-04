@@ -1,4 +1,5 @@
-
+#include <cstddef>
+#include <stdint.h>
 #include "StatsCalculator.h"
 
 #include <gsl/gsl_statistics.h>

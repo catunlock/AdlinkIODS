@@ -53,7 +53,7 @@ CPP_SERVERS  =  $(TANGO_HOME)/cppserver
 
 DESTLIB_HOME ?= $(CPP_SERVERS)
 
-DESTOS=$(shell getos)
+DESTOS=debian9
 
 ifdef no_debug
 	DEBUG = -O2 -DNDEBUG
@@ -85,6 +85,7 @@ endif
 INCLUDE_DIRS =  -I$(TANGO_HOME)/include/tango \
 		-I$(SUPER_HOME)/include \
 		-I$(OMNI_HOME)/include \
+		-I$(GSL_HOME)/include \
 		-I.	\
 		-I../include \
 		-I$(DASK_HOME)/include 

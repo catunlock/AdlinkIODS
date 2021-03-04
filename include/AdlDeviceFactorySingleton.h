@@ -38,7 +38,8 @@ namespace AdlDeviceFactorySingleton_
 		ADFMODE_TOTAL
 	};
 	
-	struct AdlBoardParams {
+//extern "C"
+    struct AdlBoardParams {
 		char				typeName[32];
 		/// Device type, as defined in adlink API functions Register_Card or D2K_Register_Card
 		/// depending on adl_params->isD2K
@@ -71,6 +72,7 @@ namespace AdlDeviceFactorySingleton_
 		short ao_nBits;
 	};
 }
+
 
 class AdlDeviceFactorySingleton
 {

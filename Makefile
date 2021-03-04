@@ -60,10 +60,10 @@ endif
 
 CPP_SERVERS  =  $(TANGO_HOME)/cppserver
 
-D2K_LIB ?= pci_dask2k
+D2K_LIB ?= pci_dask2k64
 
-64bits=$(shell getos | grep _64$ | wc -w)
-DESTOS=$(shell getos)
+64bits=1
+DESTOS=debian9
 
 
 ifdef no_debug
@@ -107,7 +107,7 @@ INCLUDE_DIRS =  -I$(TANGO_HOME)/include/tango \
 		-I./aio \
 		-I./dio \
 		-I./counter \
-		-I$(GSL_HOME) \
+		-I$(GSL_HOME)/include \
 		-I$(SUPER_HOME)/include \
 		-I$(DIOSUPER_HOME)/include \
 		-I$(CPP_SERVERS)/include
@@ -148,6 +148,7 @@ LFLAGS =  $(DEBUG) $(LIB_DIRS)  		\
 				-lCOS4			\
 				-ldl -lpthread \
 				-l$(D2K_LIB) \
+				-L/homelocal/sicilia/workspace/pci/lib/ \
 				-lpci_dask \
 				-lrt \
 				$(ZMQ_FLAGS)
@@ -217,7 +218,7 @@ link:
 	cd bin && rm -f AdlinkIODS && ln -s AdlinkIODS.$(DESTOS) AdlinkIODS
 
 bin/AdlinkIODS.$(DESTOS):  make_obj_dir make_bin_dir aux-$(DESTOS).a $(SVC_OBJS)
-	$(CC) $(SUPER_OBJS) $(SVC_OBJS) -o bin/AdlinkIODS.$(DESTOS) $(LFLAGS) ./aio/AdlinkAIO-$(DESTOS).a ./dio/AdlinkDIO-$(DESTOS).a   ./src/utils-$(DESTOS).a $(DIOSUPER_HOME)/lib/libtgclasses.a ./aio/AdlinkAIO-$(DESTOS).a ./counter/AdlinkIOCounter-$(DESTOS).a $(GSL_LIB_HOME)/libgsl.a $(GSL_LIB_HOME)/libgslcblas.a
+	$(CC) $(SUPER_OBJS) $(SVC_OBJS) -o bin/AdlinkIODS.$(DESTOS) $(LFLAGS) ./aio/AdlinkAIO-$(DESTOS).a ./dio/AdlinkDIO-$(DESTOS).a   ./src/utils-$(DESTOS).a $(DIOSUPER_HOME)/lib/libtgclasses.a ./aio/AdlinkAIO-$(DESTOS).a ./counter/AdlinkIOCounter-$(DESTOS).a -lgsl -lgslcblas
 	# todo I am statically linking lgsl and lgslblas because they are not
 	# part of the standard installation here at cells, I should tell
 	# systems to change this...

@@ -11,154 +11,154 @@ namespace {
 using namespace AdlDeviceFactorySingleton_;
 
 static const AdlBoardParams __DAQ_2205 = {
-	typeName : "DAQ_2205",
-	type : DAQ_2205,
-	isD2K : true,
-	modeSlots : {1, 1, 1, 2},
-	totalChannels : 64, //64/32 AI; 2 AO
-	aiChannels: 64, // 64 single-ended or 32 differential-input
-	aoChannels: 2,
-	timeBase : 40000000,
-	minInputScanIntrv : 80,
-	maxInputScanIntrv : 16777215,
-	onBoardBufferSz : 1024,
-	ai_nBits : 16,
-	ao_nBits : 12,
+	"DAQ_2205",
+	DAQ_2205,
+	true,
+	{1, 1, 1, 2},
+	64, //64/32 AI; 2 AO
+	// 64 single-ended or 32 differential-input
+	2,
+	40000000,
+	80,
+	16777215,
+	1024,
+	16,
+	12,
 };
 
 static const AdlBoardParams __DAQ_2213 = {
-	typeName : "DAQ_2213",
-	type : DAQ_2213,
-	isD2K : true,
-	modeSlots : {1, 0, 1, 2},
-	totalChannels : 16, //16/8 AI; 0 AO
-	aiChannels: 16, // 16 single-ended or 8 diferential-input
-	aoChannels: 0,
-	timeBase : 40000000,
-	minInputScanIntrv : 160,
-	maxInputScanIntrv : 16777215,
-	onBoardBufferSz : 1024,
-	ai_nBits : 16,
-	ao_nBits : 0,
+	"DAQ_2213",
+	DAQ_2213,
+	true,
+	{1, 0, 1, 2},
+	16, //16/8 AI; 0 AO
+	16, // 16 single-ended or 8 diferential-input
+	0,
+	40000000,
+	160,
+	16777215,
+	1024,
+	16,
+	0,
 };
 
 static const AdlBoardParams __DAQ_2502 = {
-	typeName : "DAQ_2502",
-	type : DAQ_2502,
-	isD2K : true,
-	modeSlots : {1, 1, 1, 2},
-	totalChannels : 8, // 4 ai, 8 ao
-	aiChannels: 4,
-	aoChannels: 8,
-	timeBase : 40000000,
-	minInputScanIntrv : 100,
-	maxInputScanIntrv : 16777215,
+	"DAQ_2502",
+	DAQ_2502,
+	true,
+	{1, 1, 1, 2},
+	8, // 4 ai, 8 ao
+	4,
+	8,
+	40000000,
+	100,
+	16777215,
 	/// @todo VERY IMPORTANT re-design need, as this board has two independent buffers for analog input and analog output!!!!
  	//onBoardBufferSz : 2048, // Analog input
-	onBoardBufferSz : 16384, // Analog output
-	ai_nBits : 14,
-	ao_nBits : 12,
+	16384, // Analog output
+	14,
+	12,
 };
 
 static const AdlBoardParams __DAQ_2005 = {
-	typeName : "DAQ_2005",
-	type : DAQ_2005,
-	isD2K : true,
-	modeSlots : {1, 1, 1, 2},
-	totalChannels : 4, // 4 ai / 2 ao
-	aiChannels: 4,
-	aoChannels: 2,
-	timeBase : 40000000,
-	minInputScanIntrv : 80,
-	maxInputScanIntrv : 16777215,
- 	onBoardBufferSz : 512,
-	ai_nBits : 16,
-	ao_nBits : 12,
+	"DAQ_2005",
+	DAQ_2005,
+	true,
+	{1, 1, 1, 2},
+	4, // 4 ai / 2 ao
+	4,
+	2,
+	40000000,
+	80,
+	16777215,
+ 	512,
+	16,
+	12,
 };
 
 static const AdlBoardParams __DAQ_2010 = {
-	typeName : "DAQ_2010",
-	type : DAQ_2010,
-	isD2K : true,
-	modeSlots : {1, 1, 1, 2},
-	totalChannels : 4, // 4 ai / 2 ao
-	aiChannels: 4,
-	aoChannels: 2,
-	timeBase : 40000000,
-	minInputScanIntrv : 20,
-	maxInputScanIntrv : 16777215,
-	onBoardBufferSz : 8192,
-	ai_nBits : 14,
-	ao_nBits : 12,
+	"DAQ_2010",
+	DAQ_2010,
+	true,
+	{1, 1, 1, 2},
+	4, // 4 ai / 2 ao
+	4,
+	2,
+	40000000,
+	20,
+	16777215,
+	8192,
+	14,
+	12,
 };
 
 static const AdlBoardParams __PCI_6202 = {
 	///@todo find out and define here the correct parameters
-	typeName : "PCI_6202",
-	type : PCI_6202,
-	isD2K : false,
-	modeSlots : {0, 1, 0, 0},
-	totalChannels : 4,
-	aiChannels: 0,
-	aoChannels: 4,
-	timeBase : 80000000,
-	minInputScanIntrv : 20, //todo
-	maxInputScanIntrv : 16777215, //todo
-	onBoardBufferSz : 512,
-	ai_nBits : 0,
-	ao_nBits : 16,
+	"PCI_6202",
+	PCI_6202,
+	false,
+	{0, 1, 0, 0},
+	4,
+	0,
+	4,
+	80000000,
+	20, //todo
+	16777215, //todo
+	512,
+	0,
+	16,
 };
 
 static const AdlBoardParams __PCI_6208V = {
 	///@todo find out and define here the correct parameters
-	typeName : "PCI_6208V",
-	type : PCI_6208V,
-	isD2K : false,
-	modeSlots : {0, 1, 0, 0},
-	totalChannels : 8,
-	aiChannels: 0,
-	aoChannels: 8,
-	timeBase : 40000000, //todo
-	minInputScanIntrv : 20, //todo
-	maxInputScanIntrv : 16777215, //todo
-	onBoardBufferSz : 16, //todo
-	ai_nBits : 0,
-	ao_nBits : 16,
+	"PCI_6208V",
+	PCI_6208V,
+	false,
+	{0, 1, 0, 0},
+	8,
+	0,
+	8,
+	40000000, //todo
+	20, //todo
+	16777215, //todo
+	16, //todo
+	0,
+	16,
 };
 
 static const AdlBoardParams __PCI_6208A = {
 	///@todo find out and define here the correct parameters
-	typeName : "PCI_6208A",
-	type : PCI_6208A,
-	isD2K : false,
-	modeSlots : {0, 1, 0, 0},
-	totalChannels : 8,
-	aiChannels: 0,
-	aoChannels: 8,
+	"PCI_6208A",
+	PCI_6208A,
+	false,
+	{0, 1, 0, 0},
+	8,
+	0,
+	8,
 // todo BEGIN ------------------------
-	timeBase : 24000000,
-	minInputScanIntrv : 96,
-	maxInputScanIntrv : 16777215,
-	onBoardBufferSz : 1024,
+	24000000,
+	96,
+	16777215,
+	1024,
 // todo END --------------------------
-	ai_nBits : 0,
-	ao_nBits : 16,
+	0,
+	16,
 };
 
 static const AdlBoardParams __PCI_9116 = {
-	typeName : "PCI_9116",
-	type : PCI_9116,
-	isD2K : false,
-	modeSlots : {1, 0, 1, 0},
-	totalChannels : 64,
-	aiChannels: 64,
-	aoChannels: 0,
-	timeBase : 24000000,
-	minInputScanIntrv : 96,
-	maxInputScanIntrv : 16777215,
-	onBoardBufferSz : 1024,
-	ai_nBits : 16,
-	ao_nBits : 0,
+	"PCI_9116",
+	PCI_9116,
+	false,
+	{1, 0, 1, 0},
+	64,
+	64,
+	0,
+	24000000,
+	96,
+	16777215,
+	1024,
+	16,
+	0,
 };
 
 };

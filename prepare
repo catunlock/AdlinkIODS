@@ -3,20 +3,24 @@
 #TEMP=/tmp/alba03
 #TEMP=/tmp/bootservertmp
 
-TEMP=`cd ../..; pwd`
+TEMP=`cd ..; pwd`
 
 # Where to look for tango libs and includes
-export TANGO_HOME=/sicilia
+export TANGO_HOME=/usr
 
 # Where the DIO abstract includes and compiled aux library is
 #export DIOSUPER_HOME=${TEMP}/rsune/DigitalIO/abstract
-export DIOSUPER_HOME=${TEMP}/InputOutput/DigitalIO/abstract
+export DIOSUPER_HOME=${TEMP}/DigitalIO/DIO
 
 # Where the AnalogDAQ abstract is
 #export SUPER_HOME=${TEMP}/rsune/AnalogDAQ
-export SUPER_HOME=${TEMP}/AbstractClasses/AnalogDAQ/
+export SUPER_HOME=${TEMP}/AnalogDAQ/trunk
 
 # Where PCIDASK and D2KDASK libraries and includes can be found
 #export DASK_HOME=${TEMP}/rsune/drivers
-export DASK_HOME=~/projects/olluenv/adlink/
+export DASK_HOME=/homelocal/sicilia/src/adlink/adlink.d2k-dask
+#export DASK_HOME=/homelocal/sicilia/workspace/D2K-DASK-X_20.10_release/usr/local/adlink/d2k-dask
 
+# jmoldes
+export linux=1
+export GSL_HOME=/homelocal/sicilia/workspace/pci

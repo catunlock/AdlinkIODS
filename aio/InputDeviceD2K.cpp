@@ -1,4 +1,4 @@
-
+#include <stdint.h>
 #include "AdlHelp.h"
 #include "InputDeviceInterface.h"
 #include <signal.h>
@@ -556,7 +556,7 @@ public:
 	}
 };
 
-/*static*/ InputDeviceD2K::InputDeviceD2K * InputDeviceD2K::s_device = 0;
+/*static*/ InputDeviceD2K * InputDeviceD2K::s_device = 0;
 /*static*/ bool InputDeviceD2K::__callbackRunning = false;
 
 //-----------------------------------------------------------------------------

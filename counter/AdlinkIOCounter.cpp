@@ -293,7 +293,7 @@ void AdlinkIOCounter::read_attr_hardware(vector<long> &attr_list)
 void AdlinkIOCounter::read_Value(Tango::Attribute &attr)
 {
 	DEBUG_STREAM << "AdlinkIOCounter::read_Value(Tango::Attribute &attr) entering... "<< endl;
-	device().read(this->m_value);
+//	device().read(this->m_value);
 	attr.set_value(attr_Value_read);
 }
 

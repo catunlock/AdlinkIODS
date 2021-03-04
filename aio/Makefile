@@ -41,8 +41,8 @@ SUPER_HOME  ?=  /homelocal/sicilia/AbstractClasses/AnalogDAQ
 D2K_LIB     ?=  pci_dask2k
 GSL_HOME    ?=  /usr
 
-64bits=$(shell getos | grep _64$ | wc -w)
-DESTOS=$(shell getos)
+64bits=1
+DESTOS=debian9
 
 CPP_SERVERS  =  $(TANGO_HOME)/cppserver
 

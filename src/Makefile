@@ -42,7 +42,7 @@ D2K_LIB      ?=  pci_dask2k
 
 CPP_SERVERS  =  $(TANGO_HOME)/cppserver
 
-DESTOS=$(shell getos)
+DESTOS=debian9
 
 ifdef no_debug
 	DEBUG = -O2 -DNDEBUG
@@ -74,6 +74,7 @@ INCLUDE_DIRS =  -I$(TANGO_HOME)/include/tango \
 		-I$(SUPER_HOME) \
                 -I$(OMNI_HOME)/include \
 		-I$(DASK_HOME)/include \
+		-I$(GSL_HOME)/include \
 		-I../include \
                 -I$(CPP_SERVERS)/include
 

@@ -90,7 +90,7 @@ private:
 				continue;
 	
 			string &mem_value = attr.get_mem_value();
-			if (mem_value == MemNotUsed)
+			if (mem_value == Tango::MemNotUsed)
 				continue;
 	
 			device->m_expectedMemorizedAttrs.insert(attr.get_name());
