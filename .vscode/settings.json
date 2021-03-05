@@ -1,5 +1,17 @@
 {
     "files.associations": {
         "istream": "cpp"
-    }
+    },
+    "C_Cpp.default.includePath": [
+        ".",
+        "./include",
+        "./",
+        "./aio/",
+        "/homelocal/sicilia/src/adlink/adlink.d2k-dask/include",
+        "/homelocal/sicilia/src/adlink/adlink.wd-dask/include",
+        "/usr/include",
+        "/usr/include/tango",
+        "../AnalogDAQ/trunk/",
+        "../pci/include"
+    ]
 }
