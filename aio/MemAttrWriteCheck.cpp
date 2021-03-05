@@ -1,3 +1,4 @@
+#include <AdlinkAIO.h>
 
 namespace AdlinkAIO_ns
 {
@@ -40,7 +41,7 @@ namespace AdlinkAIO_ns
 class MemAttrWriteCheck
 {
 public:
-	typedef AdlinkAIO TheDeviceType;
+	typedef AdlinkAIO_ns::AdlinkAIO TheDeviceType;
 	typedef std::set<std::string> StringSet;
 
 private:

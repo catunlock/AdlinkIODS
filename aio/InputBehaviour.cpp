@@ -8,7 +8,8 @@
 #define _OCLASSNAME "InputBehaviour"
 #include "odebug.h"
 
-
+//#include <dask.h>
+#define PCI_9116 32
 ///
 /// This is just an implementation of CallbackEventReceiver interface
 /// needed by InputDevice to inform me about signals produced by the

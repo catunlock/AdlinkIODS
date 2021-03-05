@@ -6,7 +6,7 @@
 #include "AdlinkBase.h"
 
 #include <d2kdask.h>
-#include <dask.h>
+//#include <dask.h>
 #include <omnithread.h>
 
 class BaseBehaviour;

@@ -12,6 +12,7 @@
 #define MIN_REF_SOURCE -10.0
 #define INTERNAL_TIMEBASE 40000000
 #define POST_TRIGGER_SIGNAL 62
+#define PCI_6208V 1
 
 class OutputDeviceInterface;
 

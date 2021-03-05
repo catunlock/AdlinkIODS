@@ -3,7 +3,7 @@
 #ifndef _ADLHELP_H___fejisFJDJedr884K9391LLlk__
 #define _ADLHELP_H___fejisFJDJedr884K9391LLlk__
 
-#include <dask.h>		// PCI_DASK
+//#include <dask.h>		// PCI_DASK
 #include <d2kdask.h>	// D2K-DASK
 #include <string>
 #include <sstream>

@@ -8,6 +8,7 @@
 
 #define _OCLASSNAME "InputDevicePSDASK"
 #include "odebug.h"
+#include <dask.h>
 
 class InputDevicePSDASK : public InputDeviceInterface
 {
