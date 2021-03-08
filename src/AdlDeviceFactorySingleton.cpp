@@ -5,6 +5,7 @@
 #include <iostream>
 #include <omnithread.h>
 #include <cassert>
+#include <dask.h>
 
 namespace {
 
