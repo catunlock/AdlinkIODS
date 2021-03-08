@@ -58,7 +58,7 @@ static const char *RcsId = "$Header$";
 #include <AdlDeviceFactorySingleton.h>
 #include "AdlinkCommon.h"
 #include "tango_utils.h"
-
+#include "dask.h"
 
 namespace AdlinkDIO_ns
 {
