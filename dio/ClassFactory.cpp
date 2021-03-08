@@ -35,7 +35,7 @@ static const char *RcsId = "$Header$";
 
 #include <tango.h>
 #include <AdlinkDIOClass.h>
-#include <AdlinkIODSClass.h>
+//#include <AdlinkIODSClass.h>
 
 /**
  *	Create AdlinkDIOClass singleton and store it in DServer object.
@@ -45,6 +45,5 @@ void Tango::DServer::class_factory()
 {
 
 	add_class(AdlinkDIO_ns::AdlinkDIOClass::init("AdlinkDIO"));
-	add_class(AdlinkIODS_ns::AdlinkIODSClass::init("AdlinkIODS"));
-
+	//add_class(AdlinkIODS_ns::AdlinkIODSClass::init("AdlinkIODS"));
 }
